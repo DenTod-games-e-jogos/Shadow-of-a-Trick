@@ -5,93 +5,124 @@ using UnityEngine;
 [RequireComponent(typeof(Pathfinding))]
 public class AlienMovement : MonoBehaviour
 {
-    [SerializeField] float _Speed = 100;
-    [SerializeField] Vector3 _Movement;
-    Rigidbody2D _Rigidbody;
-    Animator _Anim;
-    Pathfinding _pathfinding;
-    Vector3 _destination;
-    bool _needToMove;
+    [SerializeField]
+    float Speed = 100.0f;
 
-    private void Awake()
+    [SerializeField]
+    Vector3 Movement;
+
+    Rigidbody2D rb;
+
+    Animator anim;
+
+    Pathfinding path;
+
+    Vector3 Destination;
+
+    bool NeedToMove;
+
+    public Transform pl;
+
+    void Awake()
     {
-        _Rigidbody = GetComponent<Rigidbody2D>();
-        _Anim = GetComponent<Animator>();
-        _pathfinding = GetComponent<Pathfinding>();
-        
+        anim = GetComponent<Animator>();
+
+        path = GetComponent<Pathfinding>();
+
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    private void Start()
+    void Start()
     {
-        _destination = _pathfinding.GetDestination();
-        _needToMove = true;
+        Destination = path.GetDestination();
+
+        NeedToMove = true;
     }
 
-    private void AnimationUpdate()
+    void AnimationUpdate()
     {
-        //_Anim.SetFloat("Horizontal", _Movement.x);
-        //_Anim.SetFloat("Vertical", _Movement.y);
-        _Anim.SetFloat("Speed", _Movement.magnitude);
-        if (_Movement.x != 0)
+        anim.SetFloat("Speed", Movement.magnitude);
+
+        if (Movement.x != 0)
         {
-            _Anim.SetFloat("Horizontal", _Movement.x);
-            _Anim.SetFloat("Vertical", 0);
+            anim.SetFloat("Horizontal", Movement.x);
+
+            anim.SetFloat("Vertical", 0);
         }
-        if (_Movement.y != 0)
+
+        if (Movement.y != 0)
         {
-            _Anim.SetFloat("Horizontal", 0);
-            _Anim.SetFloat("Vertical", _Movement.y);
+            anim.SetFloat("Horizontal", 0);
+
+            anim.SetFloat("Vertical", Movement.y);
         }
     }
-    private void FixedUpdate()
+
+    void FixedUpdate()
     {
-        if (_needToMove)
+        if (NeedToMove)
         {
-            if (KeepMovingToActualDestination())
+            if(GoToDestination())
             {
-                _Movement = (_destination - transform.position);
-                _Movement.z = 0;
-                _Movement = _Movement.normalized;
+                Movement = (Destination - transform.position);
+
+                Movement.z = 0;
+
+                Movement = Movement.normalized;
             }
+
             else
             {
-                _destination = _pathfinding.GetDestination();
-                _Movement = (_destination - transform.position);
-                _Movement.z = 0;
-                _Movement = _Movement.normalized;
+                Destination = path.GetDestination();
+
+                Movement = (Destination - transform.position);
+
+                Movement.z = 0;
+
+                Movement = Movement.normalized;
             }
-            _Rigidbody.velocity = _Movement * _Speed * Time.deltaTime;
+
+            rb.velocity = Movement * Speed * Time.deltaTime;
         }
+
         else
         {
-            _Rigidbody.velocity = new Vector3(0,0,0);
+            rb.velocity = new Vector3(0, 0, 0);
         }
+
         AnimationUpdate();
     }
 
-    private bool KeepMovingToActualDestination()
+    bool GoToDestination()
     {
-        Vector3 _check = _pathfinding.CheckDestination();
-        _check.z = 0;
-        if ((transform.position - _check).magnitude < 1.4f)
-            return false;
-        else
-            return true;
-    }
+        Vector3 check = path.CheckDestination();
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
+        check.z = 0;
+
+        if ((transform.position - check).magnitude < 1.4f)
         {
-            _needToMove = false;
+            return false;
+        }
+            
+        else
+        {
+            return true;
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D player)
     {
-        if (collision.gameObject.tag == "Player")
+        if (player.gameObject.tag == "Player")
         {
-            _needToMove = true;
+            NeedToMove = false;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D player)
+    {
+        if (player.gameObject.tag == "Player")
+        {
+            NeedToMove = true;
         }
     }
 }

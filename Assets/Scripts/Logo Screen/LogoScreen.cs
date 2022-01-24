@@ -12,10 +12,11 @@ public class LogoScreen : MonoBehaviour
 
     IEnumerator Wait()
     {
-        
         yield return new WaitForSeconds(5);
+
         ChangeScene();    
     }
+
     void ChangeScene()
     {
         SceneManager.LoadScene("MainMenu");

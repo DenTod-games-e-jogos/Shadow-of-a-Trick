@@ -5,46 +5,65 @@ using UnityEngine.InputSystem;
 
 public class Controller : MonoBehaviour
 {
-    [SerializeField] float _Speed = 100;
+    [SerializeField] 
+    float _Speed = 100;
+    
     PlayerControler _Input;
+    
     Vector2 _Movement;
-    Rigidbody2D _Rigidbody;
+    
+    public Rigidbody2D _Rigidbody;
+    
     Animator _Anim;
 
-    private void Awake() {
+    void Awake() 
+    {
         _Input = new PlayerControler();
+        
         _Input.Enable();
+        
         _Rigidbody = GetComponent<Rigidbody2D>();
+        
         _Anim = GetComponent<Animator>();
     }
 
-    private void OnEnable() {
+    void OnEnable() 
+    {
         _Input.Enable();
 
         _Input.Charactercontroller.Movement.performed += OnMovement;
+
         _Input.Charactercontroller.Movement.canceled += OnMovement;
     }
 
-    private void OnDisable() {
+    void OnDisable() 
+    {
         _Input.Disable();
     }
 
-    private void OnMovement(InputAction.CallbackContext ctx) {
+    void OnMovement(InputAction.CallbackContext ctx) 
+    {
         _Movement = ctx.ReadValue<Vector2>();
-        //_Anim.SetFloat("Horizontal", _Movement.x);
-        //_Anim.SetFloat("Vertical", _Movement.y);
+
         _Anim.SetFloat("Speed", _Movement.magnitude);
-        if (_Movement.x != 0) {
+
+        if (_Movement.x != 0) 
+        {
             _Anim.SetFloat("Horizontal", _Movement.x);
+
             _Anim.SetFloat("Vertical", 0);
         }
-        if (_Movement.y != 0) {
+        
+        if (_Movement.y != 0) 
+        {
             _Anim.SetFloat("Horizontal", 0);
+
             _Anim.SetFloat("Vertical", _Movement.y);
         }
     }
 
-    private void FixedUpdate() {
+    void FixedUpdate() 
+    {
         _Rigidbody.velocity = _Movement * _Speed * Time.deltaTime;
     }
 }

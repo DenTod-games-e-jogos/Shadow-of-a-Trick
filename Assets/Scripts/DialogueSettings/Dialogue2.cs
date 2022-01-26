@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Dialogue", menuName = "Shadow of a Trick/Dialogue System", order = 1)]
-public class Dialogue : ScriptableObject
+public class Dialogue2 : ScriptableObject
 {
     [Tooltip("Sprite o perssonagem que est� falando.")]
     

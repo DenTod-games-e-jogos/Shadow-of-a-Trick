@@ -50,14 +50,10 @@ public class DialogueManager : MonoBehaviour
 
             
             yield return new WaitForSeconds(4.0f);
-            if (_dialogue == null)
-            {
-                _endDialogueCanvas.SetActive(false);
-            }
-            else
-            {
-                SetDitalogue(_dialogue.GetNextDialogue());
-            }
+        
+            SetDitalogue(_dialogue.GetNextDialogue());
+ 
         } while (_dialogue != null);
+        _endDialogueCanvas.SetActive(false);
     }
 }

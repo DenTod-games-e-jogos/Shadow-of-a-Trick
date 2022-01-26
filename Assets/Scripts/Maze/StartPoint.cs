@@ -7,12 +7,12 @@ public class StartPoint : MonoBehaviour
     GameObject PlayerPrefab;
 
     [SerializeField]
-    CinemachineVirtualCamera camera;
+    CinemachineVirtualCamera _camera;
 
     void Start()
     {
         GameObject Player = Instantiate(PlayerPrefab, new Vector2(-14.5f, 5.5f), Quaternion.identity);
 
-        camera.Follow = Player.transform;
+        _camera.Follow = Player.transform;
     }
 }

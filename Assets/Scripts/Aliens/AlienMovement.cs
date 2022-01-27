@@ -6,7 +6,7 @@ using UnityEngine;
 public class AlienMovement : MonoBehaviour
 {
     [SerializeField]
-    float Speed = 100.0f;
+    float Speed = 5.0f;
 
     [SerializeField]
     Vector3 Movement;
@@ -87,7 +87,7 @@ public class AlienMovement : MonoBehaviour
 
         else
         {
-            rb.velocity = new Vector3(0, 0, 0);
+            rb.velocity = new Vector3(10, 5, 0);
         }
 
         AnimationUpdate();
@@ -99,7 +99,7 @@ public class AlienMovement : MonoBehaviour
 
         check.z = 0;
 
-        if ((transform.position - check).magnitude < 1.4f)
+        if ((transform.position - check).magnitude < 1.5f)
         {
             return false;
         }
@@ -110,17 +110,17 @@ public class AlienMovement : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D player)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        if (player.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             NeedToMove = false;
         }
     }
 
-    void OnCollisionExit2D(Collision2D player)
+    void OnCollisionExit2D(Collision2D other)
     {
-        if (player.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             NeedToMove = true;
         }

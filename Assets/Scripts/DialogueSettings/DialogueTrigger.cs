@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueTrigger2 : MonoBehaviour
+public class DialogueTrigger : MonoBehaviour
 {
     [SerializeField] 
     GameObject _dialogueCanvas;

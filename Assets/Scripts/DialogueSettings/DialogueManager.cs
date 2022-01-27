@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueManager2 : MonoBehaviour
+public class DialogueManager : MonoBehaviour
 {
     [SerializeField] 
     GameObject _leftDialogueCanvas;
@@ -78,17 +78,11 @@ public class DialogueManager2 : MonoBehaviour
 
             yield return new WaitForSeconds(4.0f);
             
-            if (_dialogue == null)
-            {
-                _endDialogueCanvas.SetActive(false);
-            }
-            
-            else
-            {
-                SetDitalogue(_dialogue.GetNextDialogue());
-            }
+            SetDitalogue(_dialogue.GetNextDialogue());
         } 
         
         while(_dialogue != null);
+
+        _endDialogueCanvas.SetActive(false);
     }
 }

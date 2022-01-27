@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class DialogueSide2 : MonoBehaviour
+public class DialogueSide : MonoBehaviour
 {
     [SerializeField] 
     GameObject dialogueBox;

@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Dialogue", menuName = "Shadow of a Trick/Dialogue System", order = 1)]
-public class Dialogue2 : ScriptableObject
+public class Dialogue : ScriptableObject
 {
-    [Tooltip("Sprite o perssonagem que est� falando.")]
+    [Tooltip("Sprite o perssonagem que está falando.")]
     
     [SerializeField] 
     Sprite _speakerPortrait;
 
-    [Tooltip("Sprite que representa a caixa de di�logo.")]
+    [Tooltip("Sprite que representa a caixa de diálogo.")]
     
     [SerializeField] 
     Sprite _dialogueBox;
 
-    [Tooltip("Texto do di�logo.")]
+    [Tooltip("Texto do diálogo.")]
 
     [TextArea]
     [SerializeField] 

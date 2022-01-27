@@ -121,6 +121,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 2230859031635514400}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbbf449b5b9eacf45a22c2f257e3a0bf, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ad37072678a051429b595ab5b11b05f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _dialogueCanvas: {fileID: 0}
+  _dialogue: {fileID: 0}

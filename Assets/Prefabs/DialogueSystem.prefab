@@ -249,7 +249,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2447995908428417341}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adfe8fb057e8e25489b4c91f7aad861c, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b6a3db5b942d9644a20a09ae90ec2f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 2447995909603233157}
@@ -479,7 +479,7 @@ GameObject:
   - component: {fileID: 2447995908648226028}
   - component: {fileID: 2447995908648226029}
   - component: {fileID: 2447995908648226030}
-  - component: {fileID: 2447995908648226018}
+  - component: {fileID: 3875903671657655641}
   m_Layer: 5
   m_Name: DialogueSystem
   m_TagString: Untagged
@@ -570,7 +570,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &2447995908648226018
+--- !u!114 &3875903671657655641
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -579,7 +579,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2447995908648226031}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d016e0e6a76058a4e95381f161909b64, type: 3}
+  m_Script: {fileID: 11500000, guid: 346be9f24c3247b4d9b5e7c70150b649, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _leftDialogueCanvas: {fileID: 2447995908428417341}
@@ -1002,7 +1002,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2447995910144803457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adfe8fb057e8e25489b4c91f7aad861c, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b6a3db5b942d9644a20a09ae90ec2f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 2447995909741113297}

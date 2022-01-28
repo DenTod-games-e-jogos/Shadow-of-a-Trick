@@ -12,13 +12,13 @@ GameObject:
   - component: {fileID: 2255147796424234343}
   - component: {fileID: 2255147796424234340}
   - component: {fileID: 2255147796424234336}
-  - component: {fileID: 7322326917199080188}
-  - component: {fileID: 7199905121189989057}
-  - component: {fileID: 8492639363207003551}
-  - component: {fileID: 1999544074534216445}
+  - component: {fileID: 8143123897240139257}
+  - component: {fileID: 8143123897240139258}
+  - component: {fileID: 7255805806391531342}
+  - component: {fileID: 6958459826067404519}
   m_Layer: 0
   m_Name: Alien 1
-  m_TagString: Player
+  m_TagString: Alien
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,7 +101,7 @@ Animator:
   m_GameObject: {fileID: 2255147796424234341}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: df3397421e854f1498309b4f4d59c9dd, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4e09fa836b8651e49bcd43996d096de5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -132,7 +132,29 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &7322326917199080188
+--- !u!195 &8143123897240139257
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2255147796424234341}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 0.8
+  m_Acceleration: 800
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 1
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.8
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &8143123897240139258
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,56 +163,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2255147796424234341}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bda511e4293cfb46b4966c4f32c077c, type: 3}
+  m_Script: {fileID: 11500000, guid: afd1c1bfc0960cc428d8cbe19f7fd1de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 100
-  Movement: {x: 0, y: 0, z: 0}
-  pl: {fileID: 2255147796424234342, guid: 6d24ef756268d5b4a810308bd6a7eea3, type: 3}
---- !u!114 &7199905121189989057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2255147796424234341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f1afb84211c739418674c8e8bd85465, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grid: {fileID: 0}
-  tilemap: {fileID: 0}
-  player: {fileID: 2255147796424234341, guid: 6d24ef756268d5b4a810308bd6a7eea3, type: 3}
-  nextDestinaton: {x: 0, y: 0, z: 0}
---- !u!61 &8492639363207003551
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2255147796424234341}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!70 &1999544074534216445
-CapsuleCollider2D:
+--- !u!58 &7255805806391531342
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -202,9 +179,25 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0025029182, y: 0}
-  m_Size: {x: 0.41221523, y: 1}
-  m_Direction: 0
+  m_Offset: {x: 0, y: -0.33}
+  serializedVersion: 2
+  m_Radius: 0.24
+--- !u!58 &6958459826067404519
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2255147796424234341}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.33}
+  serializedVersion: 2
+  m_Radius: 0.4
 --- !u!1 &3563652989456310850
 GameObject:
   m_ObjectHideFlags: 0

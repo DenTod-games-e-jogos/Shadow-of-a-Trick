@@ -36,8 +36,8 @@ public class AlienNavMeshAgent : MonoBehaviour
 
         agent.SetDestination(player.transform.position);
 
-        anim.SetFloat("Speed", agent.velocity.magnitude);
         anim.SetFloat("Horizontal", agent.velocity.x);
+
         anim.SetFloat("Vertical", agent.velocity.y);
 
     }

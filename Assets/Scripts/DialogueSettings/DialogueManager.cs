@@ -18,20 +18,24 @@ public class DialogueManager : MonoBehaviour
     
     DialogueSide _dialogueSide;
 
+    float dialogueTimerCounter;
+    float dialogueMaxTime;
+
     public void OnEnable()
     {
+        dialogueMaxTime = 4.0f;
+
         InputManager.Input.Dialogue.Forward.performed += OnSkipDialogue;
-        InputManager.Input.Dialogue.Forward.canceled += OnSkipDialogue;
     }
 
     public void OnDisable()
     {
         InputManager.Input.Dialogue.Forward.performed -= OnSkipDialogue;
-        InputManager.Input.Dialogue.Forward.canceled -= OnSkipDialogue;
     }
 
     private void OnSkipDialogue(InputAction.CallbackContext obj)
     {
+        dialogueTimerCounter = Mathf.Infinity;
     }
 
     public void SetDitalogue (Dialogue dialogue)
@@ -89,7 +93,7 @@ public class DialogueManager : MonoBehaviour
             
             _endDialogueCanvas.SetActive(true);
 
-            yield return new WaitForSeconds(4.0f);
+            yield return StartCoroutine("TimeToWaitOrTap");
 
             SetDitalogue(_dialogue.GetNextDialogue());
         } 
@@ -100,5 +104,15 @@ public class DialogueManager : MonoBehaviour
 
         InputManager.Instance.UpdateControllerSet(InputManager.ControllerSet.Movement);
 
+    }
+
+    private IEnumerator TimeToWaitOrTap()
+    {
+        dialogueTimerCounter = 0.0f;
+        while (dialogueTimerCounter < dialogueMaxTime)
+        {
+            dialogueTimerCounter += Time.deltaTime;
+            yield return null;
+        }
     }
 }

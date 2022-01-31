@@ -18,11 +18,11 @@ public class DialogueManager : MonoBehaviour
     
     DialogueSide _dialogueSide;
 
-    Sprite _dialoguePortrait;
+    //Sprite _dialoguePortrait;
     
-    Sprite _dialogueBox;
+    //Sprite _dialogueBox;
     
-    string _dialogueText;
+    //string _dialogueText;
 
     public void OnEnable()
     {

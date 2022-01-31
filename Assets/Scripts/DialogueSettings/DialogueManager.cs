@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -22,6 +24,22 @@ public class DialogueManager : MonoBehaviour
     
     string _dialogueText;
 
+    public void OnEnable()
+    {
+        InputManager.Input.Dialogue.Forward.performed += OnSkipDialogue;
+        InputManager.Input.Dialogue.Forward.canceled += OnSkipDialogue;
+    }
+
+    public void OnDisable()
+    {
+        InputManager.Input.Dialogue.Forward.performed -= OnSkipDialogue;
+        InputManager.Input.Dialogue.Forward.canceled -= OnSkipDialogue;
+    }
+
+    private void OnSkipDialogue(InputAction.CallbackContext obj)
+    {
+    }
+
     public void SetDitalogue (Dialogue dialogue)
     {
         _dialogue = dialogue;
@@ -32,8 +50,9 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(RunDialogue());
     }
 
-    IEnumerator RunDialogue()
+    private IEnumerator RunDialogue()
     {
+        InputManager.Instance.UpdateControllerSet(InputManager.ControllerSet.Dialogue);
         do
         {
             if (_dialogue.GetSpeakerSide() == Dialogue.Side.Left)
@@ -77,12 +96,15 @@ public class DialogueManager : MonoBehaviour
             _endDialogueCanvas.SetActive(true);
 
             yield return new WaitForSeconds(4.0f);
-            
+
             SetDitalogue(_dialogue.GetNextDialogue());
         } 
         
         while(_dialogue != null);
 
         _endDialogueCanvas.SetActive(false);
+
+        InputManager.Instance.UpdateControllerSet(InputManager.ControllerSet.Movement);
+
     }
 }

@@ -2,7 +2,7 @@
     "name": "Player Controler",
     "maps": [
         {
-            "name": "Character controller",
+            "name": "Character Controller",
             "id": "03a06214-8aa7-4878-bc00-46785c36ea32",
             "actions": [
                 {
@@ -661,6 +661,34 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "TrackedDeviceOrientation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Dialogue",
+            "id": "b5b7fcfc-fa2c-4afe-b431-06a05bb76689",
+            "actions": [
+                {
+                    "name": "Forward",
+                    "type": "Button",
+                    "id": "feafe7de-2a18-47fe-a303-67bf16453831",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ff8b05af-aa07-4f49-a105-a9ea8fd09e6a",
+                    "path": "<Keyboard>/anyKey",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Forward",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

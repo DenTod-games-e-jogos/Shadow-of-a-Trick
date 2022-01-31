@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,8 +9,6 @@ public class Controller : MonoBehaviour
     [SerializeField] 
     float _Speed = 100;
     
-    PlayerControler _Input;
-    
     Vector2 _Movement;
     
     public Rigidbody2D _Rigidbody;
@@ -18,29 +17,39 @@ public class Controller : MonoBehaviour
 
     void Awake() 
     {
-        _Input = new PlayerControler();
-        
-        _Input.Enable();
-        
         _Rigidbody = GetComponent<Rigidbody2D>();
         
         _Anim = GetComponent<Animator>();
     }
 
-    void OnEnable() 
+    void OnEnable()
     {
-        _Input.Enable();
-
-        _Input.Charactercontroller.Movement.performed += OnMovement;
-
-        _Input.Charactercontroller.Movement.canceled += OnMovement;
+        InputManager.Input.CharacterController.Movement.performed += OnMovement;
+        InputManager.Input.CharacterController.Movement.canceled += OnMovement;
+        InputManager.OnControllerSettingChange += InputManagerOnControllerSettingChange;
     }
+
 
     void OnDisable() 
     {
-        _Input.Disable();
+        InputManager.Input.CharacterController.Movement.performed -= OnMovement;
+        InputManager.Input.CharacterController.Movement.canceled -= OnMovement;
+        InputManager.OnControllerSettingChange -= InputManagerOnControllerSettingChange;
     }
 
+    private void InputManagerOnControllerSettingChange(InputManager.ControllerSet state)
+    {
+        if (state == InputManager.ControllerSet.Movement)
+        {
+            InputManager.Input.CharacterController.Movement.performed += OnMovement;
+            InputManager.Input.CharacterController.Movement.canceled += OnMovement;
+        }
+        else
+        {
+            InputManager.Input.CharacterController.Movement.performed -= OnMovement;
+            InputManager.Input.CharacterController.Movement.canceled -= OnMovement;
+        }
+    }
     void OnMovement(InputAction.CallbackContext ctx) 
     {
         _Movement = ctx.ReadValue<Vector2>();

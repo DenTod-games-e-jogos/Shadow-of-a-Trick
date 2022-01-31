@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,6 +26,29 @@ public class AlienNavMeshAgent : MonoBehaviour
 
     }
 
+    void OnEnable()
+    {
+        InputManager.OnControllerSettingChange += InputManagerOnControllerSettingChange;
+    }
+
+
+    void OnDisable()
+    {
+        InputManager.OnControllerSettingChange -= InputManagerOnControllerSettingChange;
+    }
+
+    private void InputManagerOnControllerSettingChange(InputManager.ControllerSet state)
+    {
+        if (state != InputManager.ControllerSet.Movement)
+        {
+            agent.isStopped = true;
+            //            agent.SetDestination(transform.position);
+        }
+        else
+        {
+            agent.isStopped = false;
+        }
+    }
 
     void Update()
     {

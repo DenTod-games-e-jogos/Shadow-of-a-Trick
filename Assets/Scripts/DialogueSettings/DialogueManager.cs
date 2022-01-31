@@ -18,12 +18,6 @@ public class DialogueManager : MonoBehaviour
     
     DialogueSide _dialogueSide;
 
-    //Sprite _dialoguePortrait;
-    
-    //Sprite _dialogueBox;
-    
-    //string _dialogueText;
-
     public void OnEnable()
     {
         InputManager.Input.Dialogue.Forward.performed += OnSkipDialogue;

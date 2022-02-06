@@ -50,9 +50,19 @@ public class InputManager : MonoBehaviour
             case ControllerSet.Movement:
                 HandleMovement();
                 break;
+            case ControllerSet.Cinematic:
+                HandleCinematic();
+                break;
         }
 
         OnControllerSettingChange?.Invoke(newSettings);
+    }
+
+    private void HandleCinematic()
+    {
+        Input.UI.Disable();
+        Input.CharacterController.Disable();
+        Input.Dialogue.Enable();
     }
 
     private void HandleMovement()
@@ -81,5 +91,6 @@ public class InputManager : MonoBehaviour
         Menu,
         Dialogue,
         Movement,
+        Cinematic,
     }
 }

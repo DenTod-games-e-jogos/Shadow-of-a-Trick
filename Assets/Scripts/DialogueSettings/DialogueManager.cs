@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
+
 
 public class DialogueManager : MonoBehaviour
 {
@@ -17,6 +19,9 @@ public class DialogueManager : MonoBehaviour
     GameObject _endDialogueCanvas;
     
     DialogueSide _dialogueSide;
+    
+    [SerializeField]
+    UnityEvent onDialogueEnds;
 
     float dialogueTimerCounter;
     float dialogueMaxTime;
@@ -50,7 +55,7 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator RunDialogue()
     {
-        InputManager.Instance.UpdateControllerSet(InputManager.ControllerSet.Dialogue);
+        //InputManager.Instance.UpdateControllerSet(InputManager.ControllerSet.Dialogue);
         do
         {
             if (_dialogue.GetSpeakerSide() == Dialogue.Side.Left)
@@ -102,7 +107,9 @@ public class DialogueManager : MonoBehaviour
 
         _endDialogueCanvas.SetActive(false);
 
-        InputManager.Instance.UpdateControllerSet(InputManager.ControllerSet.Movement);
+        onDialogueEnds.Invoke();
+
+        //InputManager.Instance.UpdateControllerSet(InputManager.ControllerSet.Movement);
 
     }
 

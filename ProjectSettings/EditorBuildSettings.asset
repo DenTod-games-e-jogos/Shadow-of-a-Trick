@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: aa031281feb19bd43b7abc1c2c118b3b
   - enabled: 1
+    path: Assets/Scenes/Introducao.unity
+    guid: 70868faec4227704b8d3e51961114ecf
+  - enabled: 1
     path: Assets/Scenes/InteriorOvni.unity
     guid: a9293303f66964149a264ce34b1cb591
   m_configObjects: {}

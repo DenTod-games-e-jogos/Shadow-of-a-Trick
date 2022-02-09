@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b26d8368b6dd7d24d90d9d30e343a44d, type: 3}
+  m_Name: Chave 1
+  m_EditorClassIdentifier: 
+  _itemName: Chave 1
+  _itemDescription: "Chave necess\xE1ria para abrir a porta"
+  _dialogueGetItem: {fileID: 11400000, guid: c7b55295dbfe23948b045cc4b363b43c, type: 2}
+  _dialogueDontHasItem: {fileID: 11400000, guid: 24c62ee4ab27a2c48bcacfad9a227c86, type: 2}
+  _dialogueHasItem: {fileID: 11400000, guid: 993cab9c8ece06a41bcde3eacf1a61bc, type: 2}

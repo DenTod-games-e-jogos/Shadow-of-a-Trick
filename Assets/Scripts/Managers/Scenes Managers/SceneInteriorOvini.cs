@@ -13,7 +13,8 @@ public class SceneInteriorOvini : MonoBehaviour
     DialogueManager _dialogueManager;
     void Start()
     {
-        InputManager.Instance.UpdateControllerSet(InputManager.ControllerSet.Dialogue);
+        //InputManager.Instance.UpdateControllerSet(InputManager.ControllerSet.Dialogue);
+        InputManager.Instance.UpdateControllerSet(InputManager.ControllerSet.Movement);
 
         _dialogueManager = _dialogueCanvas.GetComponent<DialogueManager>();
 
@@ -25,7 +26,7 @@ public class SceneInteriorOvini : MonoBehaviour
 
     public void OnDialogueEnds()
     {
-        InputManager.Instance.UpdateControllerSet(InputManager.ControllerSet.Movement);
-        _dialogueCanvas.SetActive(false);
+        //InputManager.Instance.UpdateControllerSet(InputManager.ControllerSet.Movement);
+        //_dialogueCanvas.SetActive(false);
     }
 }

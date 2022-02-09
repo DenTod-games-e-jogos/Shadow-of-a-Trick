@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Alien
+  - Game Manager
+  - Input Manager
+  - Scene Manager
+  - Dialogue System
   layers:
   - Default
   - TransparentFX

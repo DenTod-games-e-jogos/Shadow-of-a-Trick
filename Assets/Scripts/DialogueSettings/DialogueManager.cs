@@ -26,6 +26,8 @@ public class DialogueManager : MonoBehaviour
     float dialogueTimerCounter;
     float dialogueMaxTime;
 
+    InputManager.ControllerSet lastSettings;
+
     public void OnEnable()
     {
         dialogueMaxTime = 4.0f;
@@ -55,7 +57,8 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator RunDialogue()
     {
-        //InputManager.Instance.UpdateControllerSet(InputManager.ControllerSet.Dialogue);
+        lastSettings = InputManager.Instance.ActualSettings;
+        InputManager.Instance.UpdateControllerSet(InputManager.ControllerSet.Dialogue);
         do
         {
             if (_dialogue.GetSpeakerSide() == Dialogue.Side.Left)
@@ -109,7 +112,7 @@ public class DialogueManager : MonoBehaviour
 
         onDialogueEnds.Invoke();
 
-        //InputManager.Instance.UpdateControllerSet(InputManager.ControllerSet.Movement);
+        InputManager.Instance.UpdateControllerSet(lastSettings);
 
     }
 

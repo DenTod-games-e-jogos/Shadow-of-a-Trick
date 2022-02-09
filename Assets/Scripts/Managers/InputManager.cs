@@ -58,6 +58,8 @@ public class InputManager : MonoBehaviour
         OnControllerSettingChange?.Invoke(newSettings);
     }
 
+    public ControllerSet ActualSettings => inputSettings;
+
     private void HandleCinematic()
     {
         Input.UI.Disable();

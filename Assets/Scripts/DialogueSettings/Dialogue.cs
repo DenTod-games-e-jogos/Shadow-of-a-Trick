@@ -21,7 +21,7 @@ public class Dialogue : ScriptableObject
     [SerializeField] 
     string _speakText;
     
-    [Tooltip("O pr�xio di�logo.")]
+    [Tooltip("O próxio diálogo.")]
     
     [SerializeField] 
     Dialogue _nextDialogue;
@@ -32,7 +32,7 @@ public class Dialogue : ScriptableObject
         [InspectorName("Lado Direito")] Right 
     }
     
-    [Tooltip("Qual o lado que o sprite do personagem ir� aparecer.")]
+    [Tooltip("Qual o lado que o sprite do personagem irá aparecer.")]
     
     [SerializeField] 
     Side _protraitSide;

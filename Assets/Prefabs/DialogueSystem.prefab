@@ -482,7 +482,7 @@ GameObject:
   - component: {fileID: 3875903671657655641}
   m_Layer: 5
   m_Name: DialogueSystem
-  m_TagString: Untagged
+  m_TagString: Dialogue System
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -584,6 +584,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _leftDialogueCanvas: {fileID: 2447995908428417341}
   _RightDialogueCanvas: {fileID: 2447995910144803457}
+  onDialogueEnds:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2447995908684537293
 GameObject:
   m_ObjectHideFlags: 0

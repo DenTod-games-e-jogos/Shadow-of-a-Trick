@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b26d8368b6dd7d24d90d9d30e343a44d, type: 3}
+  m_Name: Chave Azul
+  m_EditorClassIdentifier: 
+  _itemName: Chave Azul
+  _itemDescription: 
+  _dialogueGetItem: {fileID: 11400000, guid: 5e457bd2a6a4b5a45a22a851f1ece5c5, type: 2}
+  _dialogueDontHasItem: {fileID: 11400000, guid: 90b6ff63389901040a400d34553a5027, type: 2}
+  _dialogueHasItem: {fileID: 11400000, guid: 5e843eb4f1f1cde429249d7541bfb3e1, type: 2}

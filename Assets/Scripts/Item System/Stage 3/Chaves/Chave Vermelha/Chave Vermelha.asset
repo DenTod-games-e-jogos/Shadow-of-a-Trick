@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b26d8368b6dd7d24d90d9d30e343a44d, type: 3}
+  m_Name: Chave Vermelha
+  m_EditorClassIdentifier: 
+  _itemName: Chave Vermelha
+  _itemDescription: 
+  _dialogueGetItem: {fileID: 11400000, guid: c9e6cfbc61fca35479cd159dad6a029c, type: 2}
+  _dialogueDontHasItem: {fileID: 11400000, guid: c140edf9470b42c40a00455cb3e8b9eb, type: 2}
+  _dialogueHasItem: {fileID: 11400000, guid: b6b7ed84c0eba32428b18b21b6539266, type: 2}

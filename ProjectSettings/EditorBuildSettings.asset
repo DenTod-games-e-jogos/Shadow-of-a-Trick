@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/InteriorOvni.unity
     guid: a9293303f66964149a264ce34b1cb591
+  - enabled: 1
+    path: Assets/Scenes/Game.unity
+    guid: 86f2e2f65dd71d743b61335fd424e59b
+  - enabled: 1
+    path: Assets/Scenes/Stage3.unity
+    guid: d884469aa4212dd40a9598f23920b432
   m_configObjects: {}

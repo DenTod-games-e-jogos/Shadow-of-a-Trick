@@ -6,6 +6,8 @@ public class ItemNeeded : MonoBehaviour
 {
     [SerializeField]
     Item _itemNeeded;
+    [SerializeField]
+    GameObject[] gameObjectsToDistroy;
     Dialogue _dialogueHasItem;
     Dialogue _dialogueDontHasItem;
     Dialogue _dialogue;
@@ -42,6 +44,10 @@ public class ItemNeeded : MonoBehaviour
             if (_inventoryManager.HasItemInInventory(_itemNeeded))
             {
                 _inventoryManager.RemoveItemFromInventory(_itemNeeded);
+                for (int i = 0; i < gameObjectsToDistroy.Length; i++)
+                {
+                    Destroy(gameObjectsToDistroy[i]);
+                }
                 Destroy(gameObject);
             }
         }

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speakerPortrait: {fileID: 52123546, guid: 6ba9a0a144677d743ac348e88cd73b29, type: 3}
   _dialogueBox: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  _speakText: There is something strange in this door. Should I open it?
+  _speakText: I feel odd near this door. Like there is something dangerous behind
+    it. I think that I should avoid open it.
   _nextDialogue: {fileID: 0}
   _protraitSide: 0

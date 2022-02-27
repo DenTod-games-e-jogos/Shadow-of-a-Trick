@@ -16,4 +16,4 @@ MonoBehaviour:
   _dialogueBox: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   _speakText: Yeah, it's me! I had a strange dream!
   _nextDialogue: {fileID: 11400000, guid: 5a69cc013656e9647935e7513223984e, type: 2}
-  _protraitSide: 1
+  _protraitSide: 0

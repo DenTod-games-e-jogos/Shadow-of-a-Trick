@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77585dad47e1b284dbf373dfe8497d5d, type: 3}
   m_Name: Noom Call Orlon 12
   m_EditorClassIdentifier: 
-  _speakerPortrait: {fileID: 52123546, guid: 6ba9a0a144677d743ac348e88cd73b29, type: 3}
+  _speakerPortrait: {fileID: -146089958, guid: 9e43ca4a092fac94dbf9200bb3393a2a, type: 3}
   _dialogueBox: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   _speakText: I thought you were gone forever after you disappear in front my eyes.
   _nextDialogue: {fileID: 11400000, guid: 9f8a9c73b487d074dbbf811051a1690a, type: 2}

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speakerPortrait: {fileID: -146089958, guid: 9e43ca4a092fac94dbf9200bb3393a2a, type: 3}
   _dialogueBox: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  _speakText: I thought you were gone forever after you disappear in front my eyes.
-  _nextDialogue: {fileID: 0}
+  _speakText: After that I fainted... And I really don't know if it was real or not.
+    And you were gone.
+  _nextDialogue: {fileID: 11400000, guid: 4c6dab290f04398419bac7cf1a4f67bb, type: 2}
   _protraitSide: 1

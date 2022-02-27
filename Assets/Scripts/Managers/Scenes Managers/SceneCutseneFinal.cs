@@ -48,11 +48,7 @@ public class SceneCutseneFinal : MonoBehaviour
     [SerializeField]
     Dialogue _dialogueNoonCallOrlon;
 
-    [SerializeField]
-    SignalAsset _dialogueEnd;
-
     PlayableDirector _timeLineDirector;
-
 
     DialogueManager _dialogueManager;
     
@@ -61,16 +57,16 @@ public class SceneCutseneFinal : MonoBehaviour
         _timeLineDirector = _timeLine.GetComponent<PlayableDirector>();
         _dialogueManager = _dialogueCanvas.GetComponent<DialogueManager>();
     }
-    public void ResumeTimeline()
+    private void ResumeTimeline()
     {
         _timeLineDirector.time = _timeLineDirector.time;
         _timeLineDirector.playableGraph.GetRootPlayable(0).SetSpeed(1);
     }
-    public void PauseTimeline()
+    private void PauseTimeline()
     {
         _timeLineDirector.playableGraph.GetRootPlayable(0).SetSpeed(0);
     }
-    public void StartTimeline()
+    private void StartTimeline()
     {
         _timeLineDirector.Play();
     }
@@ -80,8 +76,84 @@ public class SceneCutseneFinal : MonoBehaviour
         InputManager.Instance.UpdateControllerSet(InputManager.ControllerSet.Cinematic);
 
         _dialogueCanvas.SetActive(true);
-        _dialogueManager.SetDitalogue(_dialogueBeging);
+//        _dialogueManager.SetDitalogue(_dialogueBeging);
+//        _dialogueManager.StartDialogue();
+    }
+    private void PlayDialogue()
+    {
+        PauseTimeline();
         _dialogueManager.StartDialogue();
+    }
 
+    public void DialogueBegin()
+    {
+        _dialogueManager.SetDitalogue(_dialogueBeging);
+        PlayDialogue();
+    }
+
+    public void DialogueDoorRight()
+    {
+        _dialogueManager.SetDitalogue(_dialogueDoorRight);
+        PlayDialogue();
+    }
+    public void DialogueAlienRight()
+    {
+        _dialogueManager.SetDitalogue(_dialogueAlienRight);
+        PlayDialogue();
+    }
+    public void DialogueDoorLeft()
+    {
+        _dialogueManager.SetDitalogue(_dialogueDoorLeft);
+        PlayDialogue();
+    }
+    public void DialogueAlienLeft()
+    {
+        _dialogueManager.SetDitalogue(_dialogueAlienLeft);
+        PlayDialogue();
+    }
+    public void DialogueNoomCenter1()
+    {
+        _dialogueManager.SetDitalogue(_dialogueNoomCenter1);
+        PlayDialogue();
+    }
+    public void DialogueDoorTop()
+    {
+        _dialogueManager.SetDitalogue(_dialogueDoorTop);
+        PlayDialogue();
+    }
+    public void DialogueAlienTop()
+    {
+        _dialogueManager.SetDitalogue(_dialogueAlienTop);
+        PlayDialogue();
+    }
+    public void DialogueDoorBottom()
+    {
+        _dialogueManager.SetDitalogue(_dialogueDoorBottom);
+        PlayDialogue();
+    }
+    public void DialogueAlienBottom()
+    {
+        _dialogueManager.SetDitalogue(_dialogueAlienBottom);
+        PlayDialogue();
+    }
+    public void DialogueAlienAroundNoon()
+    {
+        _dialogueManager.SetDitalogue(_dialogueAlienAroundNoon);
+        PlayDialogue();
+    }
+    public void DialogueAlienOnNoon()
+    {
+        _dialogueManager.SetDitalogue(_dialogueAlienOnNoon);
+        PlayDialogue();
+    }
+    public void DialogueNoonCallOrlon()
+    {
+        _dialogueManager.SetDitalogue(_dialogueNoonCallOrlon);
+        PlayDialogue();
+    }
+
+    public void OnDialogueEnds()
+    {
+        ResumeTimeline();
     }
 }

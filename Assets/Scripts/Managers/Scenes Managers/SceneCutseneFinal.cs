@@ -156,4 +156,8 @@ public class SceneCutseneFinal : MonoBehaviour
     {
         ResumeTimeline();
     }
+    public void CutsceneEnd()
+    {
+        SceneManager.LoadScene("EndScene");
+    }
 }

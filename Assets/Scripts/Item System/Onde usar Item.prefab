@@ -77,8 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -794367598, guid: f8bc8c1297a14984783e23a2eecfa1d8, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.8083925, a: 1}
+  m_Sprite: {fileID: 1853175581, guid: fa091e631339d254bac48a8331a55c22, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -142,7 +142,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83a10dd1e6532a2419dc356cbb2a5d5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _itemNeeded: {fileID: 11400000, guid: 94894f69386716e489a9af20bb04bd63, type: 2}
+  _itemNeeded: {fileID: 11400000, guid: c7b95f6810cfbcb44bc355a1030ede14, type: 2}
+  gameObjectsToDistroy:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &7837484083969314602
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,7 +199,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 0, b: 0.7330103, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0

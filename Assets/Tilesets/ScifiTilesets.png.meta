@@ -78,14 +78,14 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -21725,8 +21725,8 @@ TextureImporter:
       ScifiTilesets_587: -797155969
       ScifiTilesets_122: 974044893
       ScifiTilesets_438: -111387204
-      ScifiTilesets_760: 264508495
       ScifiTilesets_909: -647956275
+      ScifiTilesets_760: 264508495
       ScifiTilesets_976: -880460891
       ScifiTilesets_912: 1646232005
       ScifiTilesets_599: -595295660
@@ -21753,9 +21753,9 @@ TextureImporter:
       ScifiTilesets_978: -567827928
       ScifiTilesets_607: 951333501
       ScifiTilesets_430: -873585729
-      ScifiTilesets_509: 655586901
       ScifiTilesets_773: 209475034
       ScifiTilesets_882: 1987831675
+      ScifiTilesets_509: 655586901
       ScifiTilesets_167: -1201022966
       ScifiTilesets_442: -216436541
       ScifiTilesets_94: -1343481995
@@ -21837,20 +21837,20 @@ TextureImporter:
       ScifiTilesets_721: -978990386
       ScifiTilesets_235: -81972705
       ScifiTilesets_195: -633415911
-      ScifiTilesets_220: 1814441136
       ScifiTilesets_854: 1698833389
       ScifiTilesets_192: -610263501
       ScifiTilesets_165: -207296081
       ScifiTilesets_86: 1139694623
       ScifiTilesets_788: 1941794982
       ScifiTilesets_447: 1401090235
-      ScifiTilesets_13: -726624785
       ScifiTilesets_830: 1895852667
+      ScifiTilesets_13: -726624785
+      ScifiTilesets_220: 1814441136
       ScifiTilesets_778: 687242735
-      ScifiTilesets_904: -553703417
       ScifiTilesets_947: 548450873
       ScifiTilesets_828: -44248869
       ScifiTilesets_548: -1330923604
+      ScifiTilesets_904: -553703417
       ScifiTilesets_647: -794367598
       ScifiTilesets_137: 684365100
       ScifiTilesets_553: 669298584
@@ -21935,6 +21935,7 @@ TextureImporter:
       ScifiTilesets_921: -874498368
       ScifiTilesets_20: 1978387986
       ScifiTilesets_363: -663807279
+      ScifiTilesets_915: -937504885
       ScifiTilesets_684: -1685531821
       ScifiTilesets_378: 744010496
       ScifiTilesets_779: 1746298695
@@ -21943,38 +21944,37 @@ TextureImporter:
       ScifiTilesets_544: -329492575
       ScifiTilesets_404: 1330945200
       ScifiTilesets_54: 1594422189
-      ScifiTilesets_579: 634687750
+      ScifiTilesets_608: 1565301572
       ScifiTilesets_843: -1111538639
       ScifiTilesets_589: 1701994243
       ScifiTilesets_0: -1604813112
-      ScifiTilesets_608: 1565301572
+      ScifiTilesets_824: 308606941
       ScifiTilesets_689: 1761224268
       ScifiTilesets_631: -1917633556
-      ScifiTilesets_824: 308606941
+      ScifiTilesets_863: 26967859
+      ScifiTilesets_579: 634687750
       ScifiTilesets_602: 909869393
       ScifiTilesets_614: -1909082990
       ScifiTilesets_226: 1464687307
-      ScifiTilesets_218: 145379215
       ScifiTilesets_368: -1135948512
+      ScifiTilesets_218: 145379215
       ScifiTilesets_673: 2098205533
+      ScifiTilesets_734: 1909504973
       ScifiTilesets_597: 119055679
       ScifiTilesets_304: -1075046917
       ScifiTilesets_361: -1842436868
       ScifiTilesets_424: 944608798
       ScifiTilesets_492: -353103938
       ScifiTilesets_767: -1275066513
-      ScifiTilesets_915: -937504885
       ScifiTilesets_156: -2145674367
       ScifiTilesets_299: -1020157120
-      ScifiTilesets_863: 26967859
       ScifiTilesets_789: 218650590
       ScifiTilesets_500: 865331420
       ScifiTilesets_639: 461000263
-      ScifiTilesets_734: 1909504973
       ScifiTilesets_269: 2016345935
-      ScifiTilesets_845: -609763607
       ScifiTilesets_937: -1172839233
       ScifiTilesets_353: 1470377370
+      ScifiTilesets_845: -609763607
       ScifiTilesets_768: 1114992017
       ScifiTilesets_83: -2035488466
       ScifiTilesets_297: -418891457
@@ -22214,10 +22214,10 @@ TextureImporter:
       ScifiTilesets_524: -350714046
       ScifiTilesets_650: 1398072935
       ScifiTilesets_184: 830603306
-      ScifiTilesets_884: 1833700989
       ScifiTilesets_1008: -997695625
       ScifiTilesets_473: 516883775
       ScifiTilesets_694: 430173676
+      ScifiTilesets_884: 1833700989
       ScifiTilesets_280: 1837128811
       ScifiTilesets_1010: -579293493
       ScifiTilesets_567: 1689736584
@@ -22228,8 +22228,8 @@ TextureImporter:
       ScifiTilesets_949: 1067018278
       ScifiTilesets_636: 8248961
       ScifiTilesets_657: -115838371
-      ScifiTilesets_838: 227211340
       ScifiTilesets_856: 2022784150
+      ScifiTilesets_838: 227211340
       ScifiTilesets_747: 1199606576
       ScifiTilesets_578: 1458523713
       ScifiTilesets_615: -1262279149
@@ -22274,10 +22274,9 @@ TextureImporter:
       ScifiTilesets_25: 1145225371
       ScifiTilesets_242: 1158799053
       ScifiTilesets_327: 1338927682
-      ScifiTilesets_388: 1589573072
       ScifiTilesets_746: -859230598
-      ScifiTilesets_555: 931600276
       ScifiTilesets_874: -1274204597
+      ScifiTilesets_388: 1589573072
       ScifiTilesets_11: -361038944
       ScifiTilesets_323: -1103907683
       ScifiTilesets_803: 752733347
@@ -22285,11 +22284,12 @@ TextureImporter:
       ScifiTilesets_653: -765177592
       ScifiTilesets_663: -193199705
       ScifiTilesets_829: 2056245436
-      ScifiTilesets_844: -57996193
+      ScifiTilesets_555: 931600276
       ScifiTilesets_239: 1552922010
       ScifiTilesets_541: 234438775
       ScifiTilesets_581: -1605667972
       ScifiTilesets_566: -1605160244
+      ScifiTilesets_844: -57996193
       ScifiTilesets_995: -397793246
       ScifiTilesets_331: -1759662987
       ScifiTilesets_873: -456746860
@@ -22318,19 +22318,19 @@ TextureImporter:
       ScifiTilesets_724: 116564338
       ScifiTilesets_572: -1890233170
       ScifiTilesets_349: 354988669
-      ScifiTilesets_457: -1957339878
       ScifiTilesets_499: -2093685330
-      ScifiTilesets_515: 1349862270
+      ScifiTilesets_457: -1957339878
       ScifiTilesets_56: -344586988
       ScifiTilesets_577: 1433090207
-      ScifiTilesets_318: 1080148717
+      ScifiTilesets_515: 1349862270
       ScifiTilesets_346: -1184187937
       ScifiTilesets_402: -206864852
       ScifiTilesets_71: -634713213
-      ScifiTilesets_833: 1291672386
+      ScifiTilesets_318: 1080148717
       ScifiTilesets_454: 907762747
       ScifiTilesets_792: 1111449777
       ScifiTilesets_930: 525201105
+      ScifiTilesets_833: 1291672386
       ScifiTilesets_282: -1618639630
       ScifiTilesets_435: 1592390668
       ScifiTilesets_417: -36479056
@@ -22344,11 +22344,11 @@ TextureImporter:
       ScifiTilesets_682: -1948717226
       ScifiTilesets_504: -887132718
       ScifiTilesets_221: -1208782128
-      ScifiTilesets_772: 1547579922
       ScifiTilesets_974: -1068600710
       ScifiTilesets_885: 1815635755
       ScifiTilesets_387: -964623341
       ScifiTilesets_483: -883743293
+      ScifiTilesets_772: 1547579922
       ScifiTilesets_348: -620117534
       ScifiTilesets_957: 834733374
       ScifiTilesets_207: -1627222890
@@ -22359,12 +22359,12 @@ TextureImporter:
       ScifiTilesets_888: -1731359582
       ScifiTilesets_219: 1522533411
       ScifiTilesets_237: 476632852
-      ScifiTilesets_629: 1503606887
-      ScifiTilesets_752: -1790103073
-      ScifiTilesets_661: -531019055
-      ScifiTilesets_662: 842009168
       ScifiTilesets_802: 2138739938
+      ScifiTilesets_752: -1790103073
+      ScifiTilesets_629: 1503606887
+      ScifiTilesets_662: 842009168
       ScifiTilesets_992: 1048604577
+      ScifiTilesets_661: -531019055
       ScifiTilesets_143: -585391464
       ScifiTilesets_28: -1296245063
       ScifiTilesets_799: 2096393149

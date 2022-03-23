@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class LogoScreen : MonoBehaviour
 {
+    void Awake()
+    {
+        Cursor.visible = true;    
+    }
+
     void Start()
     {
         StartCoroutine(Wait());

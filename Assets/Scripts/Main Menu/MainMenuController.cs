@@ -9,6 +9,7 @@ public class MainMenuController : MonoBehaviour
     {
         InputManager.Instance.UpdateControllerSet(InputManager.ControllerSet.Menu);
     }
+    
     public void OnNewGameClick()
     {
         SceneManager.LoadScene("Introducao");

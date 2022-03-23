@@ -6,7 +6,6 @@ using UnityEngine.Playables;
 using UnityEngine.Timeline;
 using UnityEngine.SceneManagement;
 
-
 public class SceneIntroducao : MonoBehaviour
 {
     [SerializeField]
@@ -23,8 +22,12 @@ public class SceneIntroducao : MonoBehaviour
 
     PlayableDirector _timeLineDirector;
 
-
     DialogueManager _dialogueManager;
+
+    void Awake()
+    {
+        Cursor.visible = false;
+    }
     void Start()
     {
         InputManager.Instance.UpdateControllerSet(InputManager.ControllerSet.Cinematic);
@@ -37,12 +40,15 @@ public class SceneIntroducao : MonoBehaviour
     public void StartDialogue()
     {
         _dialogueCanvas.SetActive(true);
+
         _dialogueManager.SetDitalogue(_dialogue);
+        
         _dialogueManager.StartDialogue();
     }
     public void OnDialogueEnds()
     {
         _timeLineDirector?.Resume();
+        
         _dialogueCanvas.SetActive(false);
     }
 
@@ -50,5 +56,4 @@ public class SceneIntroducao : MonoBehaviour
     {
         SceneManager.LoadScene("InteriorOvni");
     }
-
 }

@@ -53,8 +53,7 @@ MonoBehaviour:
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
-  m_LightCookieSprite: {fileID: -1580547902, guid: f8bc8c1297a14984783e23a2eecfa1d8,
-    type: 3}
+  m_LightCookieSprite: {fileID: -1580547902, guid: f8bc8c1297a14984783e23a2eecfa1d8, type: 3}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
   m_OverlapOperation: 0
@@ -122,6 +121,7 @@ GameObject:
   - component: {fileID: 6903945703252671805}
   - component: {fileID: 6903945703252671804}
   - component: {fileID: 4251730190621238396}
+  - component: {fileID: 1910422333}
   m_Layer: 0
   m_Name: EndPoint
   m_TagString: Untagged
@@ -223,3 +223,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1910422333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6903945703252671807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c3ffd0842654a149853a1fe8822942a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextScene: CutSceneFinal

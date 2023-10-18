@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SceneStage3 : MonoBehaviour
@@ -19,13 +17,9 @@ public class SceneStage3 : MonoBehaviour
         _dialogueManager = _dialogueCanvas.GetComponent<DialogueManager>();
 
         _dialogueCanvas.SetActive(true);
-        _dialogueManager.SetDitalogue(_dialogue);
-        _dialogueManager.StartDialogue();
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
+        _dialogueManager.SetDitalogue(_dialogue);
         
+        _dialogueManager.StartDialogue();
     }
 }

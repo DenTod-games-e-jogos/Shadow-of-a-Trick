@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -25,7 +22,9 @@ public class Controller : MonoBehaviour
     void OnEnable()
     {
         InputManager.Input.CharacterController.Movement.performed += OnMovement;
+
         InputManager.Input.CharacterController.Movement.canceled += OnMovement;
+
         InputManager.OnControllerSettingChange += InputManagerOnControllerSettingChange;
     }
 
@@ -33,7 +32,9 @@ public class Controller : MonoBehaviour
     void OnDisable() 
     {
         InputManager.Input.CharacterController.Movement.performed -= OnMovement;
+
         InputManager.Input.CharacterController.Movement.canceled -= OnMovement;
+        
         InputManager.OnControllerSettingChange -= InputManagerOnControllerSettingChange;
     }
 
@@ -42,14 +43,18 @@ public class Controller : MonoBehaviour
         if (state == InputManager.ControllerSet.Movement)
         {
             InputManager.Input.CharacterController.Movement.performed += OnMovement;
+
             InputManager.Input.CharacterController.Movement.canceled += OnMovement;
         }
+
         else
         {
             InputManager.Input.CharacterController.Movement.performed -= OnMovement;
+            
             InputManager.Input.CharacterController.Movement.canceled -= OnMovement;
         }
     }
+
     void OnMovement(InputAction.CallbackContext ctx) 
     {
         _Movement = ctx.ReadValue<Vector2>();

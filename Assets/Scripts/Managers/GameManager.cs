@@ -1,21 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    private void Awake()
+    void Awake()
     {
         if (Instance != null && Instance != this)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
+
             return;
         }
 
         Instance = this;
 
-        DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(gameObject);
     }
 }

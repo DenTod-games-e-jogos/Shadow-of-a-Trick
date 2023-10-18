@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
@@ -28,6 +25,7 @@ public class SceneIntroducao : MonoBehaviour
     {
         Cursor.visible = false;
     }
+
     void Start()
     {
         InputManager.Instance.UpdateControllerSet(InputManager.ControllerSet.Cinematic);
@@ -45,6 +43,7 @@ public class SceneIntroducao : MonoBehaviour
         
         _dialogueManager.StartDialogue();
     }
+    
     public void OnDialogueEnds()
     {
         _timeLineDirector?.Resume();

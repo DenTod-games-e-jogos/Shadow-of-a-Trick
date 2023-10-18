@@ -1,4 +1,4 @@
-﻿{
+{
     "files.exclude":
     {
         "**/.DS_Store":true,
@@ -52,5 +52,32 @@
         "ProjectSettings/":true,
         "temp/":true,
         "Temp/":true
-    }
+    },
+    "cSpell.words": [
+        "Beging",
+        "Behaviour",
+        "Controler",
+        "Cutscene",
+        "Cutsene",
+        "Descrição",
+        "diálogo",
+        "Distroy",
+        "Ditalogue",
+        "Dont",
+        "dpad",
+        "Gamepad",
+        "Introducao",
+        "Noom",
+        "numpad",
+        "obtem",
+        "opciona",
+        "Ovini",
+        "Ovni",
+        "Playables",
+        "Possível",
+        "Rigidbody",
+        "Scriptable",
+        "WASD"
+    ],
+    "dotnet.preferCSharpExtension": true
 }

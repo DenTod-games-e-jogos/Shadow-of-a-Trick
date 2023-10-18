@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
-using UnityEngine.Timeline;
 using UnityEngine.SceneManagement;
 
 public class SceneCutseneFinal : MonoBehaviour
@@ -18,11 +15,13 @@ public class SceneCutseneFinal : MonoBehaviour
 
     [SerializeField]
     Dialogue _dialogueDoorRight;
+
     [SerializeField]
     Dialogue _dialogueAlienRight;
 
     [SerializeField]
     Dialogue _dialogueDoorLeft;
+
     [SerializeField]
     Dialogue _dialogueAlienLeft;
 
@@ -31,11 +30,13 @@ public class SceneCutseneFinal : MonoBehaviour
 
     [SerializeField]
     Dialogue _dialogueDoorTop;
+
     [SerializeField]
     Dialogue _dialogueAlienTop;
 
     [SerializeField]
     Dialogue _dialogueDoorBottom;
+
     [SerializeField]
     Dialogue _dialogueAlienBottom;
 
@@ -52,20 +53,25 @@ public class SceneCutseneFinal : MonoBehaviour
 
     DialogueManager _dialogueManager;
     
-    private void Awake()
+    void Awake()
     {
         _timeLineDirector = _timeLine.GetComponent<PlayableDirector>();
+
         _dialogueManager = _dialogueCanvas.GetComponent<DialogueManager>();
     }
-    private void ResumeTimeline()
+
+    void ResumeTimeline()
     {
         _timeLineDirector.time = _timeLineDirector.time;
+
         _timeLineDirector.playableGraph.GetRootPlayable(0).SetSpeed(1);
     }
-    private void PauseTimeline()
+
+    void PauseTimeline()
     {
         _timeLineDirector.playableGraph.GetRootPlayable(0).SetSpeed(0);
     }
+
     private void StartTimeline()
     {
         _timeLineDirector.Play();
@@ -76,18 +82,19 @@ public class SceneCutseneFinal : MonoBehaviour
         InputManager.Instance.UpdateControllerSet(InputManager.ControllerSet.Cinematic);
 
         _dialogueCanvas.SetActive(true);
-//        _dialogueManager.SetDitalogue(_dialogueBeging);
-//        _dialogueManager.StartDialogue();
     }
-    private void PlayDialogue()
+
+    void PlayDialogue()
     {
         PauseTimeline();
+
         _dialogueManager.StartDialogue();
     }
 
     public void DialogueBegin()
     {
         _dialogueManager.SetDitalogue(_dialogueBeging);
+
         PlayDialogue();
     }
 
@@ -96,59 +103,81 @@ public class SceneCutseneFinal : MonoBehaviour
         _dialogueManager.SetDitalogue(_dialogueDoorRight);
         PlayDialogue();
     }
+
     public void DialogueAlienRight()
     {
         _dialogueManager.SetDitalogue(_dialogueAlienRight);
+
         PlayDialogue();
     }
+
     public void DialogueDoorLeft()
     {
         _dialogueManager.SetDitalogue(_dialogueDoorLeft);
+
         PlayDialogue();
     }
+
     public void DialogueAlienLeft()
     {
         _dialogueManager.SetDitalogue(_dialogueAlienLeft);
+
         PlayDialogue();
     }
+
     public void DialogueNoomCenter1()
     {
         _dialogueManager.SetDitalogue(_dialogueNoomCenter1);
+
         PlayDialogue();
     }
+
     public void DialogueDoorTop()
     {
         _dialogueManager.SetDitalogue(_dialogueDoorTop);
+
         PlayDialogue();
     }
+
     public void DialogueAlienTop()
     {
         _dialogueManager.SetDitalogue(_dialogueAlienTop);
+
         PlayDialogue();
     }
+
     public void DialogueDoorBottom()
     {
         _dialogueManager.SetDitalogue(_dialogueDoorBottom);
+
         PlayDialogue();
     }
+
     public void DialogueAlienBottom()
     {
         _dialogueManager.SetDitalogue(_dialogueAlienBottom);
+
         PlayDialogue();
     }
+
     public void DialogueAlienAroundNoon()
     {
         _dialogueManager.SetDitalogue(_dialogueAlienAroundNoon);
+
         PlayDialogue();
     }
+
     public void DialogueAlienOnNoon()
     {
         _dialogueManager.SetDitalogue(_dialogueAlienOnNoon);
+
         PlayDialogue();
     }
+
     public void DialogueNoonCallOrlon()
     {
         _dialogueManager.SetDitalogue(_dialogueNoonCallOrlon);
+
         PlayDialogue();
     }
 
@@ -156,6 +185,7 @@ public class SceneCutseneFinal : MonoBehaviour
     {
         ResumeTimeline();
     }
+
     public void CutsceneEnd()
     {
         SceneManager.LoadScene("EndScene");

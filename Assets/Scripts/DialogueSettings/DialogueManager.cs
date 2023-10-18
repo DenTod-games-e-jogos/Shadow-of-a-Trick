@@ -24,6 +24,7 @@ public class DialogueManager : MonoBehaviour
     UnityEvent onDialogueEnds;
 
     float dialogueTimerCounter;
+
     float dialogueMaxTime;
 
     InputManager.ControllerSet lastSettings;
@@ -40,7 +41,7 @@ public class DialogueManager : MonoBehaviour
         InputManager.Input.Dialogue.Forward.performed -= OnSkipDialogue;
     }
 
-    private void OnSkipDialogue(InputAction.CallbackContext obj)
+    void OnSkipDialogue(InputAction.CallbackContext obj)
     {
         dialogueTimerCounter = Mathf.Infinity;
     }
@@ -55,9 +56,10 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(RunDialogue());
     }
 
-    private IEnumerator RunDialogue()
+    IEnumerator RunDialogue()
     {
         lastSettings = InputManager.Instance.ActualSettings;
+
         InputManager.Instance.UpdateControllerSet(InputManager.ControllerSet.Dialogue);
         do
         {
@@ -113,15 +115,16 @@ public class DialogueManager : MonoBehaviour
         onDialogueEnds.Invoke();
 
         InputManager.Instance.UpdateControllerSet(lastSettings);
-
     }
 
-    private IEnumerator TimeToWaitOrTap()
+    IEnumerator TimeToWaitOrTap()
     {
         dialogueTimerCounter = 0.0f;
+
         while (dialogueTimerCounter < dialogueMaxTime)
         {
             dialogueTimerCounter += Time.deltaTime;
+
             yield return null;
         }
     }

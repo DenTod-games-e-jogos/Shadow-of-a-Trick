@@ -73,10 +73,12 @@
         "opciona",
         "Ovini",
         "Ovni",
+        "Pathfinding",
         "Playables",
         "Possível",
         "Rigidbody",
         "Scriptable",
+        "Tilemaps",
         "WASD"
     ],
     "dotnet.preferCSharpExtension": true
